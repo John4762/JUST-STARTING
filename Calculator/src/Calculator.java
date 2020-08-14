@@ -1,12 +1,9 @@
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Calculator extends JFrame implements ActionListener {
-
-
     public static JFrame frame;
     public static JPanel panel;
     public static JButton b1;
@@ -26,8 +23,6 @@ public class Calculator extends JFrame implements ActionListener {
     public static JButton bmod;
     public static JButton beq;
     public static JTextField text;
-
-
 
     public  static void buttons(){
         b1 = new JButton("1");
@@ -114,7 +109,6 @@ public class Calculator extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-
         Calculator c = new Calculator();
 
         frame = new JFrame();
@@ -123,25 +117,18 @@ public class Calculator extends JFrame implements ActionListener {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Calculator");
 
-
-
         panel = new JPanel();
         frame.add(panel);
         panel.setBounds(20,20,400,300);
         panel.setBackground(Color.LIGHT_GRAY);
         panel.setBorder(BorderFactory.createLineBorder(Color.RED));
 
-
         buttons();
-
 
         text = new JTextField("");
         text.setBackground(Color.cyan);
         text.setBounds(20, 20, 300, 70);
         panel.add(text);
-
-
-
 
         b1.addActionListener(c);
         b2.addActionListener(c);
@@ -161,19 +148,9 @@ public class Calculator extends JFrame implements ActionListener {
 
     }
 
-
-
     @Override
-
         public void actionPerformed(ActionEvent e) {
-
             if (e.getSource()==b1)
                 text.setText("1");
         }
-
     }
-
-
-
-
-
